@@ -46,6 +46,6 @@ all of this is already done from defining the variables
 
 -console.log(choices)
 
--merge arrays inside of choices
+
 -random number generator that pulls from the choices array and applies a random character to password
 -random number generator runs for passLength amount of times
