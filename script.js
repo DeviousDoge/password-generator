@@ -19,24 +19,37 @@ function generatePassword() {
   var numChars = ['1','2','3','4','5','6','7','8','9','0']; 
   var choices = [];
   // TODO: add code to generate the password here
+console.log(lowerChars)
 
  if (useUpper === true){
-  choices.push(upperChars);
   choices.concat(upperChars);
+  choices=choices.concat(upperChars);
+
  } if (useLower === true){
-  choices.push(lowerChars);
   choices.concat(lowerChars);
+  choices=choices.concat(lowerChars);
+
  } if (useSpecial === true){
-  choices.push(specialChars);
   choices.concat(specialChars);
+  choices=choices.concat(specialChars);
+
  } if (useNumber === true){
-  choices.push(numChars);
   choices.concat(numChars);
+  choices=choices.concat(numChars);
  };
+
   console.log(useUpper);
   console.log(choices);
 
-  var password = Math.floor(Math.random()*choices.length);
+//  var password = [];
+  for (i=0; i<passLength; i++) {
+    var element = Math.floor(Math.random()*choices.length);
+    //this returns a value to choose which item in choices index to apply to password
+    // add choices[element] to password
+    password = password + choices[element];
+  };
+  console.log(element);
+  console.log(password);
 
   return password;
 }
